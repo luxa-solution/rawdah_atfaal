@@ -87,7 +87,13 @@ const Navigation = () => {
                   <NavigationMenuItem>
                     <NavigationMenuTrigger
                       className={`${
-                        isActive("/quran") || isActive("/hadith")
+                        isActive("/quran") ||
+                        isActive("/hadith") ||
+                        isActive("/courses") ||
+                        isActive("/aqeedah") ||
+                        isActive("/fiqh") ||
+                        isActive("/tafsir") ||
+                        isActive("/tajwid")
                           ? "bg-primary/10"
                           : ""
                       } hover:scale-105 transition-all duration-200`}
@@ -97,6 +103,20 @@ const Navigation = () => {
                     </NavigationMenuTrigger>
                     <NavigationMenuContent>
                       <div className="grid gap-3 p-4 w-[400px]">
+                        <Link
+                          to="/courses"
+                          className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground bg-primary/5 border border-primary/20"
+                        >
+                          <div className="flex items-center gap-2">
+                            <Bookmark className="w-4 h-4" />
+                            <div className="text-sm font-medium leading-none">
+                              View All Courses
+                            </div>
+                          </div>
+                          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                            Explore all our Islamic education programs
+                          </p>
+                        </Link>
                         <Link
                           to="/quran"
                           className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
@@ -247,6 +267,15 @@ const Navigation = () => {
                   Courses
                 </div>
               </div>
+              <Link to="/courses" onClick={() => setIsOpen(false)}>
+                <Button
+                  variant={isActive("/courses") ? "soft" : "ghost"}
+                  className="w-full justify-start hover:bg-primary/10 transition-all duration-200 pl-6 font-semibold"
+                >
+                  <Bookmark className="w-4 h-4 mr-2" />
+                  View All Courses
+                </Button>
+              </Link>
               <Link to="/quran" onClick={() => setIsOpen(false)}>
                 <Button
                   variant={isActive("/quran") ? "soft" : "ghost"}

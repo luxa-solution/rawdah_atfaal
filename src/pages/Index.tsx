@@ -175,6 +175,12 @@ const Index = () => {
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Comprehensive Islamic learning designed specifically for children
             </p>
+            <Link to="/courses">
+              <Button variant="outline" size="lg" className="mt-4">
+                <BookOpen className="w-5 h-5 mr-2" />
+                View All Courses
+              </Button>
+            </Link>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
