@@ -89,7 +89,7 @@ const QuranProgram = () => {
               style={{ animationDelay: "0.2s" }}
             >
               <img
-                src={quranIcon}
+                src={quranIcon as any}
                 alt="Qur'an Program"
                 className="w-full h-full object-cover"
               />

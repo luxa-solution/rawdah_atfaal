@@ -1,5 +1,5 @@
 import { BookOpen, Heart, Mail, Phone, MapPin } from "lucide-react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -29,25 +29,25 @@ const Footer = () => {
             </h3>
             <div className="space-y-2">
               <Link
-                to="/"
+                href="/"
                 className="block text-muted-foreground hover:text-primary hover:translate-x-1 transition-all duration-200"
               >
                 Home
               </Link>
               <Link
-                to="/about"
+                href="/about"
                 className="block text-muted-foreground hover:text-primary hover:translate-x-1 transition-all duration-200"
               >
                 About Us
               </Link>
               <Link
-                to="/quran"
+                href="/quran"
                 className="block text-muted-foreground hover:text-primary hover:translate-x-1 transition-all duration-200"
               >
                 Qur'an Program
               </Link>
               <Link
-                to="/hadith"
+                href="/hadith"
                 className="block text-muted-foreground hover:text-primary hover:translate-x-1 transition-all duration-200"
               >
                 Hadith Program
@@ -60,13 +60,13 @@ const Footer = () => {
             <h3 className="text-lg font-semibold text-foreground">Support</h3>
             <div className="space-y-2">
               <Link
-                to="/faq"
+                href="/faq"
                 className="block text-muted-foreground hover:text-primary hover:translate-x-1 transition-all duration-200"
               >
                 FAQ
               </Link>
               <Link
-                to="/contact"
+                href="/contact"
                 className="block text-muted-foreground hover:text-primary hover:translate-x-1 transition-all duration-200"
               >
                 Contact Us

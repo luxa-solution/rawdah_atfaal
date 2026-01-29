@@ -88,7 +88,7 @@ const HadithProgram = () => {
               style={{ animationDelay: "0.2s" }}
             >
               <img
-                src={hadithIcon}
+                src={hadithIcon as any}
                 alt="Hadith Program"
                 className="w-full h-full object-cover"
               />

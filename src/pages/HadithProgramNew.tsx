@@ -106,7 +106,7 @@ const HadithProgram = () => {
           <div className="max-w-4xl mx-auto text-center space-y-8">
             <div className="w-24 h-24 mx-auto rounded-2xl overflow-hidden shadow-card">
               <img
-                src={hadithIcon}
+                src={hadithIcon as any}
                 alt="Hadith Program"
                 className="w-full h-full object-cover"
               />

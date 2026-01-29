@@ -23,7 +23,7 @@ import {
   MessageSquare,
 } from "lucide-react";
 import Layout from "@/components/Layout";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 
 const FAQ = () => {
   const [activeCategory, setActiveCategory] = useState("enrollment");
@@ -313,7 +313,7 @@ const FAQ = () => {
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <Link to="/contact">
+                <Link href="/contact">
                   <Button variant="outline" className="w-full">
                     Contact Us
                   </Button>

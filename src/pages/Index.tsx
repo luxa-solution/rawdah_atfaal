@@ -16,7 +16,7 @@ import {
   ChevronRight,
   Scroll,
 } from "lucide-react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import Layout from "@/components/Layout";
 import quranIcon from "@/assets/quran-icon.jpg";
 import hadithIcon from "@/assets/hadith-icon.jpg";
@@ -175,7 +175,7 @@ const Index = () => {
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Comprehensive Islamic learning designed specifically for children
             </p>
-            <Link to="/courses">
+            <Link href="/courses">
               <Button variant="outline" size="lg" className="mt-4">
                 <BookOpen className="w-5 h-5 mr-2" />
                 View All Courses
@@ -192,7 +192,7 @@ const Index = () => {
               <CardHeader className="text-center pb-6">
                 <div className="w-20 h-20 mx-auto rounded-2xl overflow-hidden shadow-soft mb-4">
                   <img
-                    src={quranIcon}
+                    src={quranIcon as any}
                     alt="Qur'an Program"
                     className="w-full h-full object-cover"
                   />
@@ -226,7 +226,7 @@ const Index = () => {
                     </span>
                   </div>
                 </div>
-                <Link to="/quran">
+                <Link href="/quran">
                   <Button
                     variant="program"
                     className="w-full group-hover:shadow-lg"
@@ -246,7 +246,7 @@ const Index = () => {
               <CardHeader className="text-center pb-6">
                 <div className="w-20 h-20 mx-auto rounded-2xl overflow-hidden shadow-soft mb-4">
                   <img
-                    src={hadithIcon}
+                    src={hadithIcon as any}
                     alt="Hadith Program"
                     className="w-full h-full object-cover"
                   />
@@ -281,7 +281,7 @@ const Index = () => {
                     </span>
                   </div>
                 </div>
-                <Link to="/hadith">
+                <Link href="/hadith">
                   <Button
                     variant="program"
                     className="w-full group-hover:shadow-lg"

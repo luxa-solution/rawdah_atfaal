@@ -12,7 +12,8 @@ import {
   GraduationCap,
   Bookmark,
 } from "lucide-react";
-import { Link, useLocation } from "react-router-dom";
+import Link from "next/link";
+import { useRouter } from "next/router";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -24,9 +25,9 @@ import {
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const location = useLocation();
+  const router = useRouter();
 
-  const isActive = (path: string) => location.pathname === path;
+  const isActive = (path: string) => router.asPath === path;
 
   // Close menu when clicking outside
   useEffect(() => {
@@ -52,7 +53,7 @@ const Navigation = () => {
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
-            <Link to="/" className="flex items-center space-x-2">
+            <Link href="/" className="flex items-center space-x-2">
               <img
                 src="/rawdah_logo2.jpg"
                 alt="Rawdah Logo"
@@ -63,7 +64,7 @@ const Navigation = () => {
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-1">
-              <Link to="/">
+              <Link href="/">
                 <Button
                   variant={isActive("/") ? "soft" : "ghost"}
                   className="flex items-center space-x-2 hover:scale-105 transition-all duration-200"
@@ -72,7 +73,7 @@ const Navigation = () => {
                   <span>Home</span>
                 </Button>
               </Link>
-              <Link to="/about">
+              <Link href="/about">
                 <Button
                   variant={isActive("/about") ? "soft" : "ghost"}
                   className="flex items-center space-x-2 hover:scale-105 transition-all duration-200"
@@ -104,7 +105,7 @@ const Navigation = () => {
                     <NavigationMenuContent>
                       <div className="grid gap-3 p-4 w-[400px]">
                         <Link
-                          to="/courses"
+                          href="/courses"
                           className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground bg-primary/5 border border-primary/20"
                         >
                           <div className="flex items-center gap-2">
@@ -118,7 +119,7 @@ const Navigation = () => {
                           </p>
                         </Link>
                         <Link
-                          to="/quran"
+                          href="/quran"
                           className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                         >
                           <div className="flex items-center gap-2">
@@ -133,7 +134,7 @@ const Navigation = () => {
                           </p>
                         </Link>
                         <Link
-                          to="/hadith"
+                          href="/hadith"
                           className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                         >
                           <div className="flex items-center gap-2">
@@ -153,7 +154,7 @@ const Navigation = () => {
                 </NavigationMenuList>
               </NavigationMenu>
 
-              <Link to="/faq">
+              <Link href="/faq">
                 <Button
                   variant={isActive("/faq") ? "soft" : "ghost"}
                   className="flex items-center space-x-2 hover:scale-105 transition-all duration-200"
@@ -162,7 +163,7 @@ const Navigation = () => {
                   <span>FAQ</span>
                 </Button>
               </Link>
-              <Link to="/contact">
+              <Link href="/contact">
                 <Button
                   variant={isActive("/contact") ? "soft" : "ghost"}
                   className="flex items-center space-x-2 hover:scale-105 transition-all duration-200"
@@ -219,12 +220,12 @@ const Navigation = () => {
         <div className="px-4 py-6 space-y-4">
           <div className="flex items-center justify-between mb-6">
             <Link
-              to="/"
+              href="/"
               className="flex items-center space-x-2"
               onClick={() => setIsOpen(false)}
             >
               <img
-                src="/src/assets/rawdah_logo2.jpg"
+                src="/rawdah_logo2.jpg"
                 alt="Rawdah Logo"
                 className="w-8 h-8 rounded-xl shadow-soft"
               />
@@ -241,7 +242,7 @@ const Navigation = () => {
           </div>
 
           <div className="space-y-1">
-            <Link to="/" onClick={() => setIsOpen(false)}>
+            <Link href="/" onClick={() => setIsOpen(false)}>
               <Button
                 variant={isActive("/") ? "soft" : "ghost"}
                 className="w-full justify-start hover:bg-primary/10 transition-all duration-200"
@@ -250,7 +251,7 @@ const Navigation = () => {
                 Home
               </Button>
             </Link>
-            <Link to="/about" onClick={() => setIsOpen(false)}>
+            <Link href="/about" onClick={() => setIsOpen(false)}>
               <Button
                 variant={isActive("/about") ? "soft" : "ghost"}
                 className="w-full justify-start hover:bg-primary/10 transition-all duration-200"
@@ -267,7 +268,7 @@ const Navigation = () => {
                   Courses
                 </div>
               </div>
-              <Link to="/courses" onClick={() => setIsOpen(false)}>
+              <Link href="/courses" onClick={() => setIsOpen(false)}>
                 <Button
                   variant={isActive("/courses") ? "soft" : "ghost"}
                   className="w-full justify-start hover:bg-primary/10 transition-all duration-200 pl-6 font-semibold"
@@ -276,7 +277,7 @@ const Navigation = () => {
                   View All Courses
                 </Button>
               </Link>
-              <Link to="/quran" onClick={() => setIsOpen(false)}>
+              <Link href="/quran" onClick={() => setIsOpen(false)}>
                 <Button
                   variant={isActive("/quran") ? "soft" : "ghost"}
                   className="w-full justify-start hover:bg-primary/10 transition-all duration-200 pl-6"
@@ -285,7 +286,7 @@ const Navigation = () => {
                   Qur'an Program
                 </Button>
               </Link>
-              <Link to="/hadith" onClick={() => setIsOpen(false)}>
+              <Link href="/hadith" onClick={() => setIsOpen(false)}>
                 <Button
                   variant={isActive("/hadith") ? "soft" : "ghost"}
                   className="w-full justify-start hover:bg-primary/10 transition-all duration-200 pl-6"
@@ -296,7 +297,7 @@ const Navigation = () => {
               </Link>
             </div>
 
-            <Link to="/faq" onClick={() => setIsOpen(false)}>
+            <Link href="/faq" onClick={() => setIsOpen(false)}>
               <Button
                 variant={isActive("/faq") ? "soft" : "ghost"}
                 className="w-full justify-start hover:bg-primary/10 transition-all duration-200"
@@ -305,7 +306,7 @@ const Navigation = () => {
                 FAQ
               </Button>
             </Link>
-            <Link to="/contact" onClick={() => setIsOpen(false)}>
+            <Link href="/contact" onClick={() => setIsOpen(false)}>
               <Button
                 variant={isActive("/contact") ? "soft" : "ghost"}
                 className="w-full justify-start hover:bg-primary/10 transition-all duration-200"

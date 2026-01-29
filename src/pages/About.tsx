@@ -17,7 +17,7 @@ import {
   GraduationCap,
 } from "lucide-react";
 import Layout from "@/components/Layout";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 
 const About = () => {
   const values = [
@@ -290,13 +290,13 @@ const About = () => {
               make in your child's life. Join thousands of families worldwide.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/contact">
+              <Link href="/contact">
                 <Button variant="secondary" size="lg" className="shadow-gold">
                   <Users className="w-5 h-5 mr-2" />
                   Get Started Today
                 </Button>
               </Link>
-              <Link to="/quran">
+              <Link href="/quran">
                 <Button
                   variant="outline"
                   size="lg"

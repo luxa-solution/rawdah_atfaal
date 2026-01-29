@@ -15,7 +15,7 @@ import {
   AudioLines,
   ChevronRight,
 } from "lucide-react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import Layout from "@/components/Layout";
 import quranIcon from "@/assets/quran-icon.jpg";
 import hadithIcon from "@/assets/hadith-icon.jpg";
@@ -177,7 +177,7 @@ const Courses = () => {
                   <div className="w-20 h-20 mx-auto rounded-2xl overflow-hidden shadow-soft mb-4">
                     {course.iconType === "image" ? (
                       <img
-                        src={course.icon as string}
+                        src={(course.icon as any).src || (course.icon as any)}
                         alt={course.title}
                         className="w-full h-full object-cover"
                       />
@@ -217,7 +217,7 @@ const Courses = () => {
                       </div>
                     ))}
                   </div>
-                  <Link to={course.link}>
+                  <Link href={course.link}>
                     <Button
                       variant="program"
                       className="w-full group-hover:shadow-lg"
