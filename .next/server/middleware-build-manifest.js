@@ -1,1 +1,39 @@
-self.__BUILD_MANIFEST={polyfillFiles:["static/chunks/polyfills-42372ed130431b0a.js"],devFiles:[],ampDevFiles:[],lowPriorityFiles:[],rootMainFiles:[],pages:{"/":["static/chunks/webpack-0b5d8249fb15f5f3.js","static/chunks/framework-64ad27b21261a9ce.js","static/chunks/main-4b423ec82b590a3f.js","static/chunks/826-ca63bd7d6f31d618.js","static/chunks/498-bc6680a795a26ffc.js","static/chunks/pages/index-8909f781ecf43902.js"],"/404":["static/chunks/webpack-0b5d8249fb15f5f3.js","static/chunks/framework-64ad27b21261a9ce.js","static/chunks/main-4b423ec82b590a3f.js","static/chunks/pages/404-bc8513996c214155.js"],"/_app":["static/chunks/webpack-0b5d8249fb15f5f3.js","static/chunks/framework-64ad27b21261a9ce.js","static/chunks/main-4b423ec82b590a3f.js","static/css/39204aeb609d31a1.css","static/chunks/pages/_app-598f916258343894.js"],"/_error":["static/chunks/webpack-0b5d8249fb15f5f3.js","static/chunks/framework-64ad27b21261a9ce.js","static/chunks/main-4b423ec82b590a3f.js","static/chunks/pages/_error-7a92967bea80186d.js"],"/about":["static/chunks/webpack-0b5d8249fb15f5f3.js","static/chunks/framework-64ad27b21261a9ce.js","static/chunks/main-4b423ec82b590a3f.js","static/chunks/826-ca63bd7d6f31d618.js","static/chunks/498-bc6680a795a26ffc.js","static/chunks/pages/about-63506bc770db4679.js"],"/aqeedah":["static/chunks/webpack-0b5d8249fb15f5f3.js","static/chunks/framework-64ad27b21261a9ce.js","static/chunks/main-4b423ec82b590a3f.js","static/chunks/826-ca63bd7d6f31d618.js","static/chunks/498-bc6680a795a26ffc.js","static/chunks/pages/aqeedah-44cc407128a62a90.js"],"/contact":["static/chunks/webpack-0b5d8249fb15f5f3.js","static/chunks/framework-64ad27b21261a9ce.js","static/chunks/main-4b423ec82b590a3f.js","static/chunks/826-ca63bd7d6f31d618.js","static/chunks/498-bc6680a795a26ffc.js","static/chunks/pages/contact-4ba2783d6121e126.js"],"/courses":["static/chunks/webpack-0b5d8249fb15f5f3.js","static/chunks/framework-64ad27b21261a9ce.js","static/chunks/main-4b423ec82b590a3f.js","static/chunks/826-ca63bd7d6f31d618.js","static/chunks/498-bc6680a795a26ffc.js","static/chunks/pages/courses-3c4b081c8a1c659e.js"],"/faq":["static/chunks/webpack-0b5d8249fb15f5f3.js","static/chunks/framework-64ad27b21261a9ce.js","static/chunks/main-4b423ec82b590a3f.js","static/chunks/826-ca63bd7d6f31d618.js","static/chunks/498-bc6680a795a26ffc.js","static/chunks/pages/faq-7da115da5dd5fd86.js"],"/fiqh":["static/chunks/webpack-0b5d8249fb15f5f3.js","static/chunks/framework-64ad27b21261a9ce.js","static/chunks/main-4b423ec82b590a3f.js","static/chunks/826-ca63bd7d6f31d618.js","static/chunks/498-bc6680a795a26ffc.js","static/chunks/pages/fiqh-f9bbcc8489b1b58f.js"],"/hadith":["static/chunks/webpack-0b5d8249fb15f5f3.js","static/chunks/framework-64ad27b21261a9ce.js","static/chunks/main-4b423ec82b590a3f.js","static/chunks/826-ca63bd7d6f31d618.js","static/chunks/498-bc6680a795a26ffc.js","static/chunks/pages/hadith-2b766ef337e571ee.js"],"/quran":["static/chunks/webpack-0b5d8249fb15f5f3.js","static/chunks/framework-64ad27b21261a9ce.js","static/chunks/main-4b423ec82b590a3f.js","static/chunks/826-ca63bd7d6f31d618.js","static/chunks/498-bc6680a795a26ffc.js","static/chunks/pages/quran-3921432218b04f71.js"],"/tafsir":["static/chunks/webpack-0b5d8249fb15f5f3.js","static/chunks/framework-64ad27b21261a9ce.js","static/chunks/main-4b423ec82b590a3f.js","static/chunks/826-ca63bd7d6f31d618.js","static/chunks/498-bc6680a795a26ffc.js","static/chunks/pages/tafsir-9be2c02bc1683300.js"],"/tajwid":["static/chunks/webpack-0b5d8249fb15f5f3.js","static/chunks/framework-64ad27b21261a9ce.js","static/chunks/main-4b423ec82b590a3f.js","static/chunks/826-ca63bd7d6f31d618.js","static/chunks/498-bc6680a795a26ffc.js","static/chunks/pages/tajwid-b802788b44d3bb71.js"]},ampFirstPages:[]},self.__BUILD_MANIFEST.lowPriorityFiles=["/static/"+process.env.__NEXT_BUILD_ID+"/_buildManifest.js",,"/static/"+process.env.__NEXT_BUILD_ID+"/_ssgManifest.js"];
+self.__BUILD_MANIFEST = {
+  "polyfillFiles": [
+    "static/chunks/polyfills.js"
+  ],
+  "devFiles": [
+    "static/chunks/react-refresh.js"
+  ],
+  "ampDevFiles": [],
+  "lowPriorityFiles": [],
+  "rootMainFiles": [],
+  "pages": {
+    "/": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/index.js"
+    ],
+    "/_app": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/_app.js"
+    ],
+    "/_error": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/_error.js"
+    ],
+    "/courses": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/courses.js"
+    ]
+  },
+  "ampFirstPages": []
+};
+self.__BUILD_MANIFEST.lowPriorityFiles = [
+"/static/" + process.env.__NEXT_BUILD_ID + "/_buildManifest.js",
+,"/static/" + process.env.__NEXT_BUILD_ID + "/_ssgManifest.js",
+
+];
